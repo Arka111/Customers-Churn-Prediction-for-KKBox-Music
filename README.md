@@ -15,9 +15,8 @@ Dataset: Kaggle: WSDM – KKBox’s Churn Prediction Challenge[4]
 4. members.csv: details about the user
 • rows = 5116194, columns=7
 
-```
-Findings from exploratory data analysis
-```
+# Findings from exploratory data analysis
+
 i) Training and member’s data exploration:-
 • There was an increase in registration trends yearly.
 • “10” and “16” class of cities present in the member dataset but missing in merged dataset, so those city classes can be one hot-encoded.
@@ -38,26 +37,28 @@ iii) User_Logs data exploration
 • Number of unique songs listened on Friday has higher influence on output.
 • Users who opted for auto renew are listening more than 100 unique songs on Sundays in two months.
 
-```
-Feature Engineering
-```
+# Feature Engineering
+
 Members data :
 Engineered 8 new features out of the members 
 Dropped  two preexisting  features.
 Removed highly correlated features such as expiration_month ,expiration_year  based on correlation matrix scores
+
 ![alt text](https://github.com/techsachinkr/Customers-Churn-Prediction-for-KKBox-Music/blob/master/Outputs/Memberfeatures_Correlation_matrix.png)
+
 Registration_via is feature with  evident higher churn rate percent, ranging from few percent to almost 20% for value 4.
+
 ![alt text](https://github.com/techsachinkr/Customers-Churn-Prediction-for-KKBox-Music/blob/master/Outputs/registered_via_churn%20relation.png)
 
 Complete data
 Removed 24 features that had correlation of greater than 0.92 using correlation matrix,leaving a total of 44 features
+
 ![alt text](https://github.com/techsachinkr/Customers-Churn-Prediction-for-KKBox-Music/blob/master/Outputs/AllFeatures_Correlation_matrix.png)
 
-Modeling
+# Modeling
 Modeled data using Random Forest Classifier with 100 estimators or trees to get 94.5% test accuracy and 0.10 log-loss.
 
-```
-Feature Importance for validating hypothesis
-```
+# Feature Importance for validating hypothesis
+
 Top 10 features from Random Forest
 ![alt text](https://github.com/techsachinkr/Customers-Churn-Prediction-for-KKBox-Music/blob/master/Outputs/features_importance.png)
