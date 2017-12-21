@@ -7,11 +7,14 @@ The train and the test data are selected from users whose membership expires wit
 
 Dataset: Kaggle: WSDM – KKBox’s Churn Prediction Challenge
 1. train.csv: msno vs is_churn
-• rows = 99,921, columns = 2
+•rows = 99,921, columns = 2
+
 2. user_logs.csv:
 • rows = ~50000000, columns = 9
+
 3. transactions.csv: details of transaction made by the users
 • rows = 21547746, columns=9
+
 4. members.csv: details about the user
 • rows = 5116194, columns=7
 
@@ -23,6 +26,7 @@ i) Training and member’s data exploration:-
 • Yearly registration trends have increased.
 • Monthly registration trends are higher in year start and year end
 • Higher daily registration trends on weekends.
+
 ii) Transactions data exploration
 • Training set is almost 4.6% of entire transactions data.
 • Almost 4.14% users had cancelled their subscription during plan period.
@@ -30,6 +34,7 @@ ii) Transactions data exploration
 • There is 93.5% correlation between actual amount paid and payment plan.
 • Also observed that same user can have multiple payment plans with different subscription time.
 • Almost 85.2% of users had set their plan to auto-renewal.
+
 iii) User_Logs data exploration
 • User Logs have logs for users not listed in train and test data sets. By removing those users, dataset reduced to half of its original size.
 • 89259 train/test users don’t have logs.
