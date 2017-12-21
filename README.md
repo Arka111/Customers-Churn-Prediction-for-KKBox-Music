@@ -4,8 +4,8 @@ Worked on this project to predict customer churn from KKBox Music Streaming Serv
 Dataset
 KKBOX is Asia’s leading music streaming service, holding the world’s most comprehensive Asia-Pop music library with over 30 million tracks. They offer a generous, unlimited version of their service to millions of people, supported by advertising and paid subscriptions. This delicate model is dependent on accurately predicting churn of their paid users. In this project we're working on a approach that predicts whether a user will churn after their subscription expires.
 The train and the test data are selected from users whose membership expires within a certain month. The train data consists of users whose subscription expires within the month of February 2017, and the test data is with users whose subscription expires within the month of March 2017. This means we are looking at user churn or renewal roughly in the month of March 2017 for train set, and the user churn or renewal roughly in the month of April 2017. Train and test sets are split by transaction date, as well as the public and private leaderboard data.
-In this dataset, KKBox has included more user’s behaviors than the ones in train and test datasets, in order to enable participants to explore different user behaviors outside of the train and test sets. For example, a user could actively cancel the subscription, but renew within 30 days.
-Dataset: Kaggle: WSDM – KKBox’s Churn Prediction Challenge[4]
+
+Dataset: Kaggle: WSDM – KKBox’s Churn Prediction Challenge
 1. train.csv: msno vs is_churn
 • rows = 99,921, columns = 2
 2. user_logs.csv:
@@ -61,4 +61,5 @@ Modeled data using Random Forest Classifier with 100 estimators or trees to get 
 # Feature Importance for validating hypothesis
 
 Top 10 features from Random Forest
+
 ![alt text](https://github.com/techsachinkr/Customers-Churn-Prediction-for-KKBox-Music/blob/master/Outputs/features_importance.png)
